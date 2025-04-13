@@ -1,0 +1,32 @@
+# Core Python Dependencies
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# LangChain & LangGraph for Agent Orchestration
+langchain
+langchain-community
+langgraph
+
+# Open‑source LLM and Embedding Integrations
+transformers
+torch
+accelerate
+sentence-transformers
+
+# Vector Store (Open‑source)
+faiss-cpu
+
+# HuggingFace integration for LangChain
+langchain-huggingface
+
+# Numerical Computing
+numpy
+
+# flask
+# hypercorn
+
+huggingface_hub[hf_xet]
+
+a2wsgi
+

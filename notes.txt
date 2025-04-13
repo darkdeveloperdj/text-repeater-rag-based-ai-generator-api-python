@@ -1,0 +1,174 @@
+# FastAPI Project Setup Guide
+
+# 1. Create a virtual environment
+
+python -m venv venv # Creates a virtual environment named 'venv'
+
+# 2. Activate the virtual environment
+
+venv\Scripts\activate # On Windows
+
+python.exe -m pip install --upgrade pip
+
+# 3. Install dependencies
+
+pip install -r requirements.txt # Installs all required dependencies
+
+# 4. Run the FastAPI app
+
+uvicorn app.main:app --reload # Starts the server with hot-reload
+
+# 5. Open in browser
+
+http://127.0.0.1:8000/docs # Swagger UI (interactive API docs)
+
+
+
+==================================================================================================================================
+🧠 Project Goal:
+Build a multi-agent RAG application using LangGraph and LangChain, with a focus on open-source tools.
+The app generates love quotes, letters, and romantic messages, guided by templates via few-shot learning.
+
+📁 Project Requirements:
+Folder Structure:
+  Provide a complete, organized folder structure
+  Clearly name each folder and file
+
+Code for Each File:
+  Include all necessary imports and code logic
+  Add inline comments or documentation for clarity
+  Prefer modular, reusable functions
+
+AI Agent Architecture:
+  Each agent handles a specific task
+  Agents orchestrated via LangGraph
+
+Workflow Overview:
+  Step 1: Inject love templates into VectorDB (FAISS)
+  Step 2: Use RAG (Retrieval-Augmented Generation) for response generation
+
+Few-Shot Learning Setup:
+  Use custom JSON-based template datasets to teach the LLM the tone, structure, and style
+  Templates guide quality and consistency of generated messages
+
+
+🌐 Environment Variables
+Please include these environment variables using .env and load them using python-dotenv:
+
+.env
+LLM_MODEL=mistralai/Mistral-7B-Instruct-v0.3
+HUGGINGFACEHUB_API_TOKEN=""
+
+📂 Example Folder Structure
+rag-love-agent/
+├── app/
+│   ├── agents/
+│   │   ├── quote_agent.py
+│   │   ├── letter_agent.py
+│   │   └── message_agent.py
+│   ├── chains/
+│   │   └── rag_chain.py
+│   ├── graph/
+│   │   └── orchestrator.py
+│   ├── templates/
+│   │   └── friendship_templates.json
+│   ├── data/
+│   │   └── custom_uploads/
+│   ├── db/
+│   │   └── vectorstore.py
+│   ├── api/
+│   │   └── routes.py
+│   └── main.py
+├── .env
+├── requirements.txt
+└── README.md
+
+
+📚 Example Template File (JSON)
+File: friendship_templates.json
+
+
+
+📥 Example User Input
+
+
+
+📤 Expected Output Format
+
+
+
+📦 requirements.txt
+
+
+
+================================================================================================
+ pipenv run pip check
+ pipenv  install -r requirements.txt  
+ pipenv shell
+ pipenv install
+
+
+ollama run llama3.1:8b
+
+ uvicorn app.main:app --reload
+
+ 
+{
+  "query": "Generate a love message",
+  "placeholders": {
+    "recipient_name": "Kashish",
+    "author_name": "Dhiraj"
+  },
+  "type": "love"
+}
+
+
+{
+  "query": "Generate a sad quote message",
+  "type": "quote"
+}
+
+
+
+docker-compose up --build
+
+
+
+docker working version
+================================
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cpu"
+verify_ssl = true
+
+[packages]
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+python-dotenv = "*"
+langchain = "*"
+langchain-community = "*"
+langgraph = "*"
+transformers = "==4.41.2"
+torch = {version = "==2.2.0+cpu", index = "pytorch"}
+accelerate = "==0.30.1"
+sentence-transformers = "==2.7.0"
+faiss-cpu = "==1.8.0"
+langchain-huggingface = "*"
+numpy = "==1.26.4"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+
+
+docker login
+
+docker tag text-repeater-i-love-you-api-ai-fastapi-app:latest dheerajdnr/text-repeater-i-love-you-api-ai-fastapi-app:latest
+
+docker push dheerajdnr/text-repeater-i-love-you-api-ai-fastapi-app:latest

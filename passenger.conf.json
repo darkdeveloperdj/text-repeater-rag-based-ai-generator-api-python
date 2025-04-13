@@ -1,0 +1,8 @@
+{
+    "environment": "production",
+    "max_pool_size": 2,
+    "min_instances": 1,
+    "pool_idle_time": 300,
+    "friendly_error_pages": false,
+    "start_timeout": 300
+}

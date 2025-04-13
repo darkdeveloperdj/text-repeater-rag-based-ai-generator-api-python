@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2419fc7a149578dfa26439416bfcd44dd5651c36d1579d16ef3c27e738f3b2f8"
+            "sha256": "c3c9b744b0be0c7cffcc5380fc533f986ad262c8a35cad2240e3e8494aba8d75"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,15 @@
         ]
     },
     "default": {
+        "a2wsgi": {
+            "hashes": [
+                "sha256:7fbdb3ef81ea46e6bbd0dcadc1ff9a7919197626c50c303ecafe400ce8099ad0",
+                "sha256:fc00bab1fc792f89a8ce1b491b2ad1717b145d8caefb75d0a8586946edc97cb2"
+            ],
+            "index": "pypi",
+            "markers": "python_full_version >= '3.8.0'",
+            "version": "==1.10.8"
+        },
         "accelerate": {
             "hashes": [
                 "sha256:1aee717d3d3735ad6d09710a7c26990ee4652b79b4e93df46551551b5227c2aa",
@@ -525,6 +534,20 @@
             "markers": "python_version >= '3.7'",
             "version": "==0.14.0"
         },
+        "hf-xet": {
+            "hashes": [
+                "sha256:014b5a40e62ad334f21513e5ba39b419117396031e9264dfc15dd598a1595029",
+                "sha256:0705e5db0da5794ab048a8662a7b3aba220f963270b26abc92e8d05abca22451",
+                "sha256:09a9565ca84049d48c99c83a82d08fbc21d63c04811fd2f7dd088292c1185bc5",
+                "sha256:1b71118b8f7e9edf1ae56282388794f351163c7de5c22ea3737dffa9313f500e",
+                "sha256:5927d1986f87b7b80616eb6353a1402be1d72c46b6b0709b01ffc7623a159563",
+                "sha256:70e18534d46ab92bbc3125addaebc145f9b27e06eecd67b40c4342f4b92b677f",
+                "sha256:a6d16861a06dd4b8f7229c16b392c5fb8b9588ced89a6ee9bc3e66227f794353",
+                "sha256:da28fd32213ad5b8f60771aba44ac032ba19d752928cfd95914f09146b3f51ec"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==1.0.3"
+        },
         "httpcore": {
             "hashes": [
                 "sha256:5254cf149bcb5f75e9d1b2b9f729ea4a4b883d1ad7379fc632b727cec23674be",
@@ -599,6 +622,9 @@
             "version": "==0.4.0"
         },
         "huggingface-hub": {
+            "extras": [
+                "hf_xet"
+            ],
             "hashes": [
                 "sha256:68ff05969927058cfa41df4f2155d4bb48f5f54f719dd0390103eefa9b191e28",
                 "sha256:9a7897c5b6fd9dad3168a794a8998d6378210f5b9688d0dfc180b1a228dc2466"
